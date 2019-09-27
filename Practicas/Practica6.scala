@@ -10,7 +10,7 @@ df.head(2)
 
 df.select(month(df("Date"))).show()
 
-df.select(year(df("Date"))).show()
+df.select(year(df($"Date"))).show()
 
 val df2 = df.withColumn("Year", year(df("Date")))
 
