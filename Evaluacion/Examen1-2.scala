@@ -14,14 +14,15 @@ printf("Las primeras 5 columnas")
 df.show(5)
 //6
 printf("Describe para aprender del DataFrame")
+df.describe()
 //7 Crear el data Frame HVRatio
 val df2 = df.withColumn("HV Ratio", df("High")/df("Volume"))
 df2.select("HV Ratio").show()
 //8
-printf("El dia del pico mas alto de la columna Price")
-df.select(max("High")).show()
+printf("El dia del pico mas alto de la columna Price, no existe la columna")
+
 //9
-print("El archivo completo es de los preccio de las acciones en la bolsa, por lo tanto el valor de Close es el el valor al cual se cerro el precio de ese dia.")
+print("El archivo completo es de los precio de las acciones en la bolsa, por lo tanto el valor de Close es el el valor al cual se cerro el precio de ese dia.")
 //10
 printf("El maximo del volumen es:")
 df.select(max("Volume")).show()
@@ -44,10 +45,8 @@ printf("Maximo de Higth por anio")
 val df2=df.withColumn("Year",year(df("Date")))
 val dfmax=df2.groupBy("Year").max()
 dfmax.select($"Year",$"max(High)").show()
-dfmax.select($"Year",$"max(High)").show(1)
 //e)
 printf("Promedio de la columna close por mes")
 val dfmonth=df.withColumn("Month",month(df("Date")))
 val dfmean=dfmonth.select($"Month",$"Close").groupBy("Month").mean()
-dfmean.orderBy($"Month".desc).show()
 dfmean.orderBy($"Month").show()
