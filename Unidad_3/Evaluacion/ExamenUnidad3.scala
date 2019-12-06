@@ -14,7 +14,7 @@ Las fuente de datos se encuentra en el repositorio:
 5. Carga el dataset de Wholesale Customers Data 
 6. Seleccione las siguientes columnas: Fres, Milk, Grocery, Frozen, Detergents_Paper, 
 Delicassen y llamar a este conjunto feature_data 
-7. Importar Vector Assembler y Vector 
+7. Importar Vector Assembler y Vector feature_data
 8. Crea un nuevo objeto Vector Assembler para las columnas de caracteristicas como un 
 conjunto de entrada, recordando que no hay etiquetas 
 9. Utilice el objeto assembler para transformar feature_data 
@@ -38,7 +38,7 @@ import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.linalg.Vectors
 
 //5. Carga el dataset de Wholesale Customers Data 
-val dataset = spark.read.option("header","true").option("inferSchema","true").csv("Wholesale_customers_data.csv")
+val dataset = spark.read.option("header","true").option("inferSchema","true").csv("Whole sale customersdata.csv")
 
 /*6. Seleccione las siguientes columnas: Fres, Milk, Grocery, Frozen, Detergents_Paper, 
 Delicassen y llamar a este conjunto feature_data */
