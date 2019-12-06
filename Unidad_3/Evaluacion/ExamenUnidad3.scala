@@ -67,4 +67,5 @@ println(s"Within Set Sum of Squared Errors = $WSSSE")
 
 //12. ¿Cuáles son los nombres de las columnas? 
 println("Cluster Centers: ")
+println("         Fresh,         Milk,            Grocery,        Frozen,            Detergents_Paper,       Delicassen")
 model.clusterCenters.foreach(println)
