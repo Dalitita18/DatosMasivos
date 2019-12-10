@@ -1,4 +1,4 @@
-// Assessment 1/Practica 1
+// Practica 1
 //1. Desarrollar un algoritmo en scala que calcule el radio de un circulo
 //2. Desarrollar un algoritmo en scala que me diga si un numero es primo
 //3. Dada la variable bird = "tweet", utiliza interpolacion de string para
